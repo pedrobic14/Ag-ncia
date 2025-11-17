@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="agencia.css">
+</head>
+<body>
+    <!-- Modal de boas-vindas -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo à Agência Criativa Web!</h2>
+            <p>Prepare-se para explorar nossas soluções digitais inovadoras. Clique em "Avançar" para começar.</p>
+            <button id="advance-btn">Avançar</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h1>Agência Criativa Web</h1>
+        </div>
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h2>Bem-vindo à Agência Criativa Web</h2>
+            <p>Transformamos ideias em experiências digitais incríveis. Seu parceiro para design e inovação.</p>
+            <img src="https://picsum.photos/800/400?random=1" 
+                 srcset="https://picsum.photos/400/200?random=1 400w, 
+                         https://picsum.photos/800/400?random=1 800w, 
+                         https://picsum.photos/1200/600?random=1 1200w" 
+                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                 alt="Banner da Agência Criativa Web">
+        </div>
+    </section>
+
+    <section id="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma agência especializada em design digital, focada em criar soluções criativas e funcionais. Nossos valores incluem inovação, qualidade e compromisso com o sucesso dos nossos clientes.</p>
+        <img src="https://picsum.photos/600/300?random=2" 
+             srcset="https://picsum.photos/300/150?random=2 300w, 
+                     https://picsum.photos/600/300?random=2 600w, 
+                     https://picsum.photos/900/450?random=2 900w" 
+             sizes="(max-width: 600px) 100vw, 50vw" 
+             alt="Equipe da Agência Criativa Web">
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="servicos-grid">
+            <div class="servico">
+                <h3>Design Gráfico</h3>
+                <p>Criação de identidades visuais e materiais gráficos impactantes.</p>
+            </div>
+            <div class="servico">
+                <h3>Desenvolvimento Web</h3>
+                <p>Sites responsivos e aplicações web de alta performance.</p>
+            </div>
+            <div class="servico">
+                <h3>Branding</h3>
+                <p>Estratégias de marca para destacar seu negócio no mercado.</p>
+            </div>
+            <div class="servico">
+                <h3>Marketing Digital</h3>
+                <p>Campanhas online para aumentar sua visibilidade e engajamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos-container">
+            <blockquote>
+                <p>"A Agência Criativa Web transformou nossa presença online. Resultados incríveis!"</p>
+                <cite>- Cliente Fictício 1</cite>
+            </blockquote>
+            <blockquote>
+                <p>"Profissionais dedicados e criativos. Recomendo a todos!"</p>
+                <cite>- Cliente Fictício 2</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contato-info">
+            <p><strong>Endereço:</strong> Rua Fictícia, 123 - Cidade, Estado</p>
+            <p><strong>Telefone:</strong> (11) 99999-9999</p>
+            <p><strong>E-mail:</strong> contato@agenciacriativaweb.com</p>
+        </div>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        // Modal de boas-vindas
+        const modal = document.getElementById('welcome-modal');
+        const advanceBtn = document.getElementById('advance-btn');
+        const homeSection = document.getElementById('home');
+
+        // Mostra o modal ao carregar a página
+        window.addEventListener('load', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Event listener para o botão "Avançar"
+        advanceBtn.addEventListener('click', () => {
+            modal.style.display = 'none'; // Oculta o modal
+            homeSection.classList.add('show'); // Anima a transição para a Home
+            // Rolagem suave para a Home (opcional)
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Event listener para toggle do menu hambúrguer com animação
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Animação simples: adicionar classe para fade
+            navMenu.style.animation = navMenu.classList.contains('active') ? 'fadeIn 0.5s' : '';
+        });
+
+        // Event listener para validação do formulário
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Impede envio real
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos!');
+            } else {
+                alert('Mensagem enviada com sucesso! (Simulação)');
+                form.reset(); // Limpa o formulário
+            }
+        });
+
+        // Event listener para animação ao rolar (scroll-triggered fade)
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 1s, transform 1s';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
