@@ -1,0 +1,11 @@
+{
+  "name": "projeto-sass",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass scss/estilos.scss css/estilos.css --style=compressed",
+    "watch": "sass --watch scss/estilos.scss css/estilos.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

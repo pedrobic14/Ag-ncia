@@ -4,112 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Criativa Web</title>
-    <link rel="stylesheet" href="agencia.css">
+    <link rel="stylesheet" href="agenciaBEM.css">
 </head>
 <body>
     <!-- Modal de boas-vindas -->
     <div id="welcome-modal" class="modal">
-        <div class="modal-content">
-            <h2>Bem-vindo à Agência Criativa Web!</h2>
-            <p>Prepare-se para explorar nossas soluções digitais inovadoras. Clique em "Avançar" para começar.</p>
-            <button id="advance-btn">Avançar</button>
+        <div class="modal__content">
+            <h2 class="modal__title">Bem-vindo à Agência Criativa Web!</h2>
+            <p class="modal__text">Prepare-se para explorar nossas soluções digitais inovadoras. Clique em "Avançar" para começar.</p>
+            <button id="advance-btn" class="btn btn--primary">Avançar</button>
         </div>
     </div>
 
-    <header>
-        <div class="logo">
-            <h1>Agência Criativa Web</h1>
+    <header class="header">
+        <div class="header__logo">
+            <h1 class="header__title">Agência Criativa Web</h1>
         </div>
-        <nav>
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-            <ul id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre-nos">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav class="nav">
+            <button class="nav__toggle" id="menu-toggle">☰</button>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--home"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#sobre-nos" class="nav__link">Sobre Nós</a></li>
+                <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
+    <section id="home" class="section section--home">
         <div class="banner">
-            <h2>Bem-vindo à Agência Criativa Web</h2>
-            <p>Transformamos ideias em experiências digitais incríveis. Seu parceiro para design e inovação.</p>
+            <h2 class="banner__title">Bem-vindo à Agência Criativa Web</h2>
+            <p class="banner__text">Transformamos ideias em experiências digitais incríveis. Seu parceiro para design e inovação.</p>
             <img src="https://picsum.photos/800/400?random=1" 
                  srcset="https://picsum.photos/400/200?random=1 400w, 
                          https://picsum.photos/800/400?random=1 800w, 
                          https://picsum.photos/1200/600?random=1 1200w" 
                  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                 alt="Banner da Agência Criativa Web">
+                 alt="Banner da Agência Criativa Web" class="banner__image">
         </div>
     </section>
 
-    <section id="sobre-nos">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma agência especializada em design digital, focada em criar soluções criativas e funcionais. Nossos valores incluem inovação, qualidade e compromisso com o sucesso dos nossos clientes.</p>
+    <section id="sobre-nos" class="section section--about">
+        <h2 class="section__title">Sobre Nós</h2>
+        <p class="section__text">Somos uma agência especializada em design digital, focada em criar soluções criativas e funcionais. Nossos valores incluem inovação, qualidade e compromisso com o sucesso dos nossos clientes.</p>
         <img src="https://picsum.photos/600/300?random=2" 
              srcset="https://picsum.photos/300/150?random=2 300w, 
                      https://picsum.photos/600/300?random=2 600w, 
                      https://picsum.photos/900/450?random=2 900w" 
              sizes="(max-width: 600px) 100vw, 50vw" 
-             alt="Equipe da Agência Criativa Web">
+             alt="Equipe da Agência Criativa Web" class="section__image">
     </section>
 
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <div class="servicos-grid">
-            <div class="servico">
-                <h3>Design Gráfico</h3>
-                <p>Criação de identidades visuais e materiais gráficos impactantes.</p>
+    <section id="servicos" class="section section--services">
+        <h2 class="section__title">Serviços</h2>
+        <div class="grid grid--services">
+            <div class="card">
+                <h3 class="card__title">Design Gráfico</h3>
+                <p class="card__text">Criação de identidades visuais e materiais gráficos impactantes.</p>
             </div>
-            <div class="servico">
-                <h3>Desenvolvimento Web</h3>
-                <p>Sites responsivos e aplicações web de alta performance.</p>
+            <div class="card">
+                <h3 class="card__title">Desenvolvimento Web</h3>
+                <p class="card__text">Sites responsivos e aplicações web de alta performance.</p>
             </div>
-            <div class="servico">
-                <h3>Branding</h3>
-                <p>Estratégias de marca para destacar seu negócio no mercado.</p>
+            <div class="card">
+                <h3 class="card__title">Branding</h3>
+                <p class="card__text">Estratégias de marca para destacar seu negócio no mercado.</p>
             </div>
-            <div class="servico">
-                <h3>Marketing Digital</h3>
-                <p>Campanhas online para aumentar sua visibilidade e engajamento.</p>
+            <div class="card">
+                <h3 class="card__title">Marketing Digital</h3>
+                <p class="card__text">Campanhas online para aumentar sua visibilidade e engajamento.</p>
             </div>
         </div>
     </section>
 
-    <section id="depoimentos">
-        <h2>Depoimentos</h2>
-        <div class="depoimentos-container">
-            <blockquote>
-                <p>"A Agência Criativa Web transformou nossa presença online. Resultados incríveis!"</p>
-                <cite>- Cliente Fictício 1</cite>
+    <section id="depoimentos" class="section section--testimonials">
+        <h2 class="section__title">Depoimentos</h2>
+        <div class="testimonials">
+            <blockquote class="testimonial">
+                <p class="testimonial__text">"A Agência Criativa Web transformou nossa presença online. Resultados incríveis!"</p>
+                <cite class="testimonial__cite">- Cliente Fictício 1</cite>
             </blockquote>
-            <blockquote>
-                <p>"Profissionais dedicados e criativos. Recomendo a todos!"</p>
-                <cite>- Cliente Fictício 2</cite>
+            <blockquote class="testimonial">
+                <p class="testimonial__text">"Profissionais dedicados e criativos. Recomendo a todos!"</p>
+                <cite class="testimonial__cite">- Cliente Fictício 2</cite>
             </blockquote>
         </div>
     </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <div class="contato-info">
-            <p><strong>Endereço:</strong> Rua Fictícia, 123 - Cidade, Estado</p>
-            <p><strong>Telefone:</strong> (11) 99999-9999</p>
-            <p><strong>E-mail:</strong> contato@agenciacriativaweb.com</p>
+    <section id="contato" class="section section--contact">
+        <h2 class="section__title">Contato</h2>
+        <div class="contact-info">
+            <p class="contact-info__item"><strong>Endereço:</strong> Rua Fictícia, 123 - Cidade, Estado</p>
+            <p class="contact-info__item"><strong>Telefone:</strong> (11) 99999-9999</p>
+            <p class="contact-info__item"><strong>E-mail:</strong> contato@agenciacriativaweb.com</p>
         </div>
-        <form action="#" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <form action="#" method="post" class="form">
+            <label for="nome" class="form__label">Nome:</label>
+            <input type="text" id="nome" name="nome" required class="form__input">
             
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="form__label">E-mail:</label>
+            <input type="email" id="email" name="email" required class="form__input">
             
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+            <label for="mensagem" class="form__label">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required class="form__textarea"></textarea>
             
-            <button type="submit">Enviar</button>
+            <button type="submit" class="btn btn--primary">Enviar</button>
         </form>
     </section>
 
